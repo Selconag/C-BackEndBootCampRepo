@@ -62,12 +62,12 @@ public class AuthorRepository : IAuthorRepository
     public Author? GetById(int id)
     {
         Author? author =  _authorData.SingleOrDefault(p => p.Id == id);
-
-        if (author is null)
+        if (author is not null)
         {
             //throw new Author Exception
+            return author;
 
         }
-        return author;
+        return null;
     }
 }

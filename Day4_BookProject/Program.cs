@@ -6,7 +6,9 @@ using Day4_BookProject.Data;
 using Day4_BookProject.Models;
 // Dapper
 
-
+//Bookservice needs a bookrepository reference in order to use services
+//therefore we created an instance(with constructor) of repository then we used that instance to construct service provider
+//For security reasons we use IBookService instead of BookService class.(Since no data nor methods with bodies written in interface)
 IBookService bookService = new BookService(new BookRepository());
 //bookService.GetList();
 
