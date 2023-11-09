@@ -6,5 +6,4 @@ public class Messages()
 											Console.WriteLine($"Aradığınız {animal} hayvan bulunamadı");
 						}
 
-
 };
