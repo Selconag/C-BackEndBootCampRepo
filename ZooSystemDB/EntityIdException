@@ -1,0 +1,10 @@
+namespace ZooSystemDB.Exceptions;
+
+public class EntityIdException: Exception<TId>
+{
+    public EntityIdException(TId id) :
+        base($"Id : {TId}, ye ait bilgi bulunamadı.")
+    {
+
+    }
+}
