@@ -20,21 +20,39 @@ public class AnimalRepository : IAnimalRepository
 
     public void Add(Animal entity)
     {
-        throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
     }
 
     public void Delete(int id)
     {
-        throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
     }
 
     public List<Animal> GetAll()
     {
-        throw new NotImplementedException();
+        return _animalsData;
     }
 
     public Animal? GetById(int id)
     {
-        throw new NotImplementedException();
+        Animal? animal = _animalsData.SingleOrDefault(x => x.Id_Animal == id);
+        if(animal is not null) return animal;
+        return null;
     }
 }

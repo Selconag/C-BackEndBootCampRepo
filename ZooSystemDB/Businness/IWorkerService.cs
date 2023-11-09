@@ -15,4 +15,9 @@ internal interface IWorkerService
     List<Worker> GetAll();
 
     Worker? GetById(int id);
+
+    public List<Cage> ListAttendedCages();
+    public List<Animal> ListAttendedCageAnimals();
+    public bool AttendedAnimalAtCage(int animalId);
+    public bool AttendedAllAnimalsAtCage(int cageId);
 }

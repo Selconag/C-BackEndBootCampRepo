@@ -8,5 +8,8 @@ namespace ZooSystemDB.Data;
 
 public interface IWorkerRepository : IEntityRepositoryBase<Worker, int>
 {
-
+    public List<Cage> ListAttendedCages();
+    public List<Animal> ListAttendedCageAnimals();
+    public bool AttendedAnimalAtCage(int animalId);
+    public bool AttendedAllAnimalsAtCage(int cageId);
 }

@@ -20,21 +20,39 @@ public class CageRepository : ICageRepository
 
     public void Add(Cage entity)
     {
-        throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
     }
 
     public void Delete(int id)
     {
-        throw new NotImplementedException();
+        try
+        {
+
+        }
+        catch (Exception)
+        {
+
+            throw;
+        }
     }
 
     public List<Cage> GetAll()
     {
-        throw new NotImplementedException();
+        return _cagesData;
     }
 
     public Cage? GetById(int id)
     {
-        throw new NotImplementedException();
+        Cage? cage = _cagesData.SingleOrDefault(x => x.Id_Cage == id);
+        if(cage is not null) return cage;
+        return null;
     }
 }

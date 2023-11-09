@@ -38,6 +38,8 @@ public class WorkerRepository : IWorkerRepository
         }
     }
 
+
+
     public void Delete(int id)
     {
         try
@@ -63,5 +65,25 @@ public class WorkerRepository : IWorkerRepository
        Worker? worker =  _workersData.SingleOrDefault(x => x.Id_Worker == id);
         if(worker is not null) return worker;
         else return null;
+    }
+
+    public bool AttendedAllAnimalsAtCage(int cageId)
+    {
+        throw new NotImplementedException();
+    }
+
+    public bool AttendedAnimalAtCage(int animalId)
+    {
+        throw new NotImplementedException();
+    }
+
+    public List<Animal> ListAttendedCageAnimals()
+    {
+        throw new NotImplementedException();
+    }
+
+    public List<Cage> ListAttendedCages()
+    {
+        throw new NotImplementedException();
     }
 }

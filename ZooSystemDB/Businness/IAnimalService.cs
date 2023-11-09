@@ -11,4 +11,6 @@ internal interface IAnimalService
     List<Animal> GetAll();
 
     Animal? GetById(int id);
+
+
 }
