@@ -1,9 +1,9 @@
 namespace ZooSystemDB.Exceptions;
 
-public class Animal : Exception
+public class AnimalIdException: Exception
 {
-    public AuthorIdException(int id) :
-        base($"Id : {id}, ye ait yazar bulunamadı.")
+    public AnimalIdException(int id) :
+        base($"Id : {Id_Animal}, ye ait hayvan bulunamadı.")
     {
 
     }
