@@ -8,5 +8,5 @@ namespace ZooSystemDB.Data;
 
 public interface IAnimalRepository : IEntityRepositoryBase<Animal, int>
 {
-
+    public bool AttendAnimal(int id);
 }

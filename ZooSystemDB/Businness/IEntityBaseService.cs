@@ -1,6 +1,6 @@
 ﻿namespace ZooSystemDB.Data;
 
-public interface IEntityRepositoryBase<TEntity, TId>
+public interface IEntityBaseService<TEntity, TId>
 {
     void Add(TEntity entity);
     void Delete(TId id);

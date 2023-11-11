@@ -31,6 +31,18 @@ public class AnimalRepository : IAnimalRepository
         }
     }
 
+    //Return true if animal is attended;
+    public bool AttendAnimal(int id)
+    {
+        Animal? animal = _animalsData.SingleOrDefault(x => x.Id_Animal == id);
+        if (animal is not null)
+        {
+            animal.LastAttended = DateTime.Now;
+            return true; 
+        }
+        else return false;
+    }
+
     public void Delete(int id)
     {
         try

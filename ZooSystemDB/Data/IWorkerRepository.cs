@@ -10,6 +10,6 @@ public interface IWorkerRepository : IEntityRepositoryBase<Worker, int>
 {
     public List<Cage> ListAttendedCages();
     public List<Animal> ListAttendedCageAnimals();
-    public bool AttendedAnimalAtCage(int animalId);
-    public bool AttendedAllAnimalsAtCage(int cageId);
+    public bool AttendAnimalAtCage(int animalId, IAnimalRepository animalRepo);
+    public bool AttendAllAnimalsAtCage(int cageId, IAnimalRepository animalRepo);
 }

@@ -19,7 +19,7 @@ public class AnimalService : IAnimalService
         try
         {
             //validasyonu kontrol et(exception atarsa çık) No validation for now
-            //AddRules(entity);
+            AddRules(entity);
             //Sorun yoksa devam et ve ekle
             _animalRepo.Add(entity);
         }
@@ -63,6 +63,16 @@ public class AnimalService : IAnimalService
             //İstisna durumunu yazdır
             Console.WriteLine(ex.Message);
             return null;
+        }
+    }
+
+    //İstisnai durumları kontrol et, varsa uyarı mesajı oluştur
+    private void AddRules(Animal animal)
+    {
+        if (animal.Name.Length < 2)
+        {
+
+            //throw new ;
         }
     }
 }

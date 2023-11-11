@@ -15,11 +15,11 @@ public class WorkerRepository : IWorkerRepository
         //Oluşturucu kısındayken veri ekle
         _workersData = new List<Worker>()
         {
-            new Worker { Id_Worker = 1, Id_AttendedCages = new int[] { 1, 2, 3 }, Name = "John Smith", Phone = "+1234567890", WorkDays = new WorkDays[] { WorkDays.Monday, WorkDays.Wednesday, WorkDays.Friday } },
-            new Worker { Id_Worker = 2, Id_AttendedCages = new int[] { 4, 5, 6 }, Name = "Jane Johnson", Phone = "+9876543210", WorkDays = new WorkDays[] { WorkDays.Tuesday, WorkDays.Thursday } },
-            new Worker { Id_Worker = 3, Id_AttendedCages = new int[] { 7, 8, 9 }, Name = "Michael Brown", Phone = "+5551234567", WorkDays = new WorkDays[] { WorkDays.Monday, WorkDays.Wednesday } },
-            new Worker { Id_Worker = 4, Id_AttendedCages = new int[] { 0 }, Name = "Emily Davis", Phone = "+8889990000", WorkDays = new WorkDays[] { WorkDays.Friday } },
-            new Worker { Id_Worker = 5, Id_AttendedCages = new int[] { 2, 4, 6, 8 }, Name = "Daniel Wilson", Phone = "+1234509876", WorkDays = new WorkDays[] { WorkDays.Tuesday, WorkDays.Thursday, WorkDays.Saturday } }
+            new Worker { Id_Worker = 1, Id_AttendedCages = new List<int> { 1, 2, 3 }, Name = "John Smith", Phone = "+1234567890", WorkDays = new WorkDays[] { WorkDays.Monday, WorkDays.Wednesday, WorkDays.Friday } },
+            new Worker { Id_Worker = 2, Id_AttendedCages = new List < int > { 4, 5, 6 }, Name = "Jane Johnson", Phone = "+9876543210", WorkDays = new WorkDays[] { WorkDays.Tuesday, WorkDays.Thursday } },
+            new Worker { Id_Worker = 3, Id_AttendedCages = new List < int > { 7, 8, 9 }, Name = "Michael Brown", Phone = "+5551234567", WorkDays = new WorkDays[] { WorkDays.Monday, WorkDays.Wednesday } },
+            new Worker { Id_Worker = 4, Id_AttendedCages = new List < int > { 0 }, Name = "Emily Davis", Phone = "+8889990000", WorkDays = new WorkDays[] { WorkDays.Friday } },
+            new Worker { Id_Worker = 5, Id_AttendedCages = new List < int > { 2, 4, 6, 8 }, Name = "Daniel Wilson", Phone = "+1234509876", WorkDays = new WorkDays[] { WorkDays.Tuesday, WorkDays.Thursday, WorkDays.Saturday } }
 
         };
     }
@@ -67,14 +67,16 @@ public class WorkerRepository : IWorkerRepository
         else return null;
     }
 
-    public bool AttendedAllAnimalsAtCage(int cageId)
+    public bool AttendAllAnimalsAtCage(int cageId, IAnimalRepository animalRepo)
     {
         throw new NotImplementedException();
     }
 
-    public bool AttendedAnimalAtCage(int animalId)
+    public bool AttendAnimalAtCage(int animalId,IAnimalRepository animalRepo)
     {
-        throw new NotImplementedException();
+
+
+        return false;
     }
 
     public List<Animal> ListAttendedCageAnimals()
